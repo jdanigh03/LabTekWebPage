@@ -7,22 +7,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo defined('PAGE_TITLE') ? PAGE_TITLE . ' - ' . SITE_NAME : SITE_NAME; ?></title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Add more CSS or Fonts here -->
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="index.php?page=home" class="logo">LABTEK</a>
+            <a href="index.php?page=home" class="logo">
+                <img src="assets/img/logo labtek-fotor-bg.png" alt="LABTEK Logo">
+            </a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.php?page=home">Inicio</a></li>
                     <li><a href="index.php?page=services">Servicios</a></li>
                     <li><a href="index.php?page=about">Sobre Nosotros</a></li>
-                    <li><a href="index.php?page=info">Información</a></li>
-                    <li><a href="index.php?page=results">Consultar Resultados</a></li>
+                    <li><a href="#" class="contact-link">Contacto</a></li>
                 </ul>
             </nav>
+            <a href="#" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
         </div>
     </header>
     <main class="container">
