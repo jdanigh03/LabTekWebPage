@@ -1,0 +1,114 @@
+/* assets/css/header.css */
+
+header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: var(--transition);
+}
+
+/* Optional: Add a 'scrolled' state if JS is added later */
+header.scrolled {
+    background-color: var(--primary-blue);
+    padding: 10px 0;
+    box-shadow: var(--shadow-sm);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.logo img {
+    height: 55px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    /* Make logo white for transparent header */
+    transition: var(--transition);
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+    /* Subtle zoom on hover */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--text-light);
+    /* Always white in this specific header design */
+    font-size: 1.05rem;
+    position: relative;
+    opacity: 0.9;
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+/* Underline Effect */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-teal);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Toggle (Hidden by default on Desktop) */
+.mobile-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE HEADER
+   ========================= */
+@media (max-width: 900px) {
+    header {
+        position: relative;
+        /* Not absolute on mobile to avoid overlap issues if content is long */
+        background-color: var(--primary-blue);
+    }
+
+    header .container {
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        gap: 15px;
+        justify-content: center;
+        /* Center everything on mobile */
+    }
+
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+}

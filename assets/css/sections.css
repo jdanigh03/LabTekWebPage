@@ -1,0 +1,262 @@
+/* assets/css/sections.css */
+
+/* =========================
+   PAGE SECTIONS - GENERAL
+   ========================= */
+.page-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.page-section.alt-bg {
+    background-color: rgba(44, 88, 152, 0.05);
+    /* Very light blue tint */
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.section-header h1,
+.section-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-header h1::after,
+.section-header h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-teal), var(--primary-blue));
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* =========================
+   SERVICES STYLES
+   ========================= */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: var(--border-radius-card);
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-card .icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.service-card .icon i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* =========================
+   ABOUT SECTION STYLES
+   ========================= */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    border-radius: var(--border-radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Feature List */
+.feature-list {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+.feature-list li i {
+    color: var(--accent-teal);
+    font-size: 1.2rem;
+}
+
+/* =========================
+   RESULTS / FORMS STYLES
+   ========================= */
+.results-section {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: var(--text-light);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.results-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/inicio-bg.jpeg') center/cover no-repeat;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.results-content {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.results-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.results-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: var(--border-radius-pill);
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 209, 197, 0.4);
+}
+
+.form-submit {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* =========================
+   RESPONSIVE SECTIONS
+   ========================= */
+@media (max-width: 900px) {
+    .page-section {
+        padding: 70px 0;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-image {
+        order: -1;
+        /* Image first on mobile */
+    }
+}
+
+@media (max-width: 600px) {
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,74 +1,27 @@
 /* assets/css/style.css */
 
-/* Reset & Basic Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* 
+ * Main Stylesheet
+ * Imports all modular CSS files in the correct order.
+ */
 
-body {
-    font-family: 'Roboto', sans-serif; /* Example font */
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-}
+/* 1. Configuration & Variables */
+@import 'variables.css';
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+/* 2. Reset & Base Styles */
+@import 'reset.css';
 
-ul {
-    list-style: none;
-}
+/* 3. Reusable Components (Buttons, Badges, etc.) */
+@import 'components.css';
 
-/* Header & Nav */
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem 0;
-}
+/* 4. Layout Sections */
+@import 'header.css';
+@import 'hero.css';
+@import 'footer.css';
+@import 'sections.css';
 
-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* 5. Page Specifics (Future proofing) */
+/* @import 'pages/about.css'; */
+/* @import 'pages/services.css'; */
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #007bff; /* Example brand color */
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    font-weight: 500;
-    color: #555;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #007bff;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: auto;
-}
-
-/* Utility Classes */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+/* Add any temp overrides below this line */

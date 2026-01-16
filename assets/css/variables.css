@@ -1,0 +1,51 @@
+/* assets/css/variables.css */
+
+:root {
+    /* =========================
+       COLORS
+       ========================= */
+    /* Primary Brand Colors */
+    --primary-blue: #2c5898;
+    /* Deep Blue - Main Brand Color */
+    --secondary-blue: #1a3c6e;
+    /* Darker Blue - Hover/Active states */
+
+    /* Accent Colors */
+    --accent-teal: #4cd1c5;
+    /* Teal - Buttons, Highlights */
+    --accent-green: #25d366;
+    /* WhatsApp Green */
+
+    /* Neutral Colors */
+    --text-light: #ffffff;
+    /* White Text */
+    --text-dark: #333333;
+    /* Dark Text - Body copy */
+    --bg-light: #f4f7f6;
+    /* Light Background - Page bg */
+
+    /* Overlays */
+    --overlay-color: rgba(30, 80, 160, 0.85);
+    /* Blue Overlay for Hero sections */
+
+    /* =========================
+       TYPOGRAPHY
+       ========================= */
+    --font-main: 'Poppins', sans-serif;
+
+    /* =========================
+       LAYOUT & UI
+       ========================= */
+    --container-width: 1200px;
+    --header-height: 80px;
+    --border-radius-pill: 50px;
+    --border-radius-card: 8px;
+
+    /* =========================
+       EFFECTS
+       ========================= */
+    --transition: all 0.3s ease;
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
