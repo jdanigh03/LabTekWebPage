@@ -19,6 +19,9 @@
             <a href="index.php?page=home" class="logo">
                 <img src="assets/img/logo labtek-fotor-bg.png" alt="LABTEK Logo">
             </a>
+            <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.php?page=home">Inicio</a></li>
@@ -27,7 +30,7 @@
                     <li><a href="#" class="contact-link">Contacto</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn-whatsapp">
+            <a href="https://wa.me/59178822909" class="btn-whatsapp" target="_blank">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
         </div>
