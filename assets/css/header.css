@@ -1,58 +1,86 @@
 /* assets/css/header.css */
 
+/* =========================
+   BASE HEADER STYLES
+   ========================= */
 header {
     background-color: transparent;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 20px 0;
-    transition: var(--transition);
+    padding: 15px 0;
+    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Optional: Add a 'scrolled' state if JS is added later */
+/* Scrolled state - solid blue background */
 header.scrolled {
     background-color: var(--primary-blue);
     padding: 10px 0;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
-/* Logo Styles */
+/* =========================
+   LOGO STYLES
+   ========================= */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 1001;
+}
+
 .logo img {
-    height: 55px;
+    height: 50px;
     width: auto;
     filter: brightness(0) invert(1);
-    /* Make logo white for transparent header */
-    transition: var(--transition);
+    transition: transform 0.3s ease;
 }
 
 .logo:hover img {
     transform: scale(1.05);
-    /* Subtle zoom on hover */
 }
 
-/* Navigation Links */
+/* =========================
+   NAVIGATION LINKS
+   ========================= */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
 .nav-links {
     display: flex;
     gap: 35px;
     align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style: none;
 }
 
 .nav-links a {
     font-weight: 500;
     color: var(--text-light);
-    /* Always white in this specific header design */
-    font-size: 1.05rem;
+    font-size: 1rem;
     position: relative;
     opacity: 0.9;
-    padding: 5px 0;
+    padding: 8px 0;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -66,49 +94,190 @@ header .container {
     width: 0;
     height: 2px;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--accent-teal);
-    transition: var(--transition);
+    transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
 
-/* Mobile Toggle (Hidden by default on Desktop) */
-.mobile-toggle {
-    display: none;
-    font-size: 1.5rem;
+/* =========================
+   WHATSAPP BUTTON
+   ========================= */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--accent-green);
     color: var(--text-light);
-    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: var(--border-radius-pill);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    background-color: #20bd5a;
+}
+
+.btn-whatsapp i {
+    font-size: 1.1rem;
 }
 
 /* =========================
-   RESPONSIVE HEADER
+   MOBILE TOGGLE BUTTON
    ========================= */
-@media (max-width: 900px) {
-    header {
-        position: relative;
-        /* Not absolute on mobile to avoid overlap issues if content is long */
-        background-color: var(--primary-blue);
-    }
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    color: var(--text-light);
+}
 
-    header .container {
-        flex-wrap: wrap;
-        /* Allow wrapping */
-        gap: 15px;
-        justify-content: center;
-        /* Center everything on mobile */
-    }
+.mobile-toggle i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
 
+.mobile-toggle.active i {
+    transform: rotate(180deg);
+}
+
+/* =========================
+   RESPONSIVE - TABLET (max-width: 992px)
+   ========================= */
+@media (max-width: 992px) {
     .nav-links {
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
+        gap: 25px;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+
+    .btn-whatsapp {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 
     .logo img {
         height: 45px;
+    }
+}
+
+/* =========================
+   RESPONSIVE - MOBILE (max-width: 768px)
+   ========================= */
+@media (max-width: 768px) {
+    header {
+        padding: 12px 0;
+    }
+
+    /* Always solid on mobile since nav takes full screen */
+    header.scrolled,
+    header {
+        background-color: var(--primary-blue);
+    }
+
+    header .container {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    /* Show mobile toggle */
+    .mobile-toggle {
+        display: block;
+        order: 3;
+    }
+
+    /* Logo stays visible */
+    .logo {
+        order: 1;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    /* Navigation - Hidden by default, slides in from top */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 999;
+    }
+
+    /* When nav-open is on the nav-links, show the parent nav */
+    nav:has(.nav-open),
+    nav.nav-open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        padding: 15px 30px;
+    }
+
+    .nav-links a::after {
+        bottom: 10px;
+    }
+
+    /* Hide WhatsApp button in header on mobile (can be shown in nav) */
+    .btn-whatsapp {
+        display: none;
+    }
+}
+
+/* =========================
+   RESPONSIVE - SMALL MOBILE (max-width: 480px)
+   ========================= */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .mobile-toggle {
+        padding: 8px;
+    }
+
+    .mobile-toggle i {
+        font-size: 1.3rem;
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+        padding: 12px 25px;
     }
 }

@@ -16,10 +16,10 @@
                 </div>
             </div>
             <div class="badge">
-                <i class="fas fa-shield-alt"></i>
+                <i class="fas fa-user-md"></i>
                 <div class="badge-text">
-                    <span>Certificación</span>
-                    <strong>ISO 9001</strong>
+                    <span>Profesionales</span>
+                    <strong>+15 Años de Experiencia</strong>
                 </div>
             </div>
         </div>
