@@ -35,4 +35,4 @@
             </a>
         </div>
     </header>
-    <main class="container">
+    <main>
