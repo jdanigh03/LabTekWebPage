@@ -9,7 +9,7 @@
                     <!-- Column 1: About & Logo -->
                     <div class="footer-col footer-about">
                         <a href="index.php?page=home" class="footer-logo">
-                            <img src="assets/img/logo labtek-fotor-bg.png" alt="LABTEK Logo">
+                            <img src="assets/img/labtek-logo-of.jpeg" alt="LABTEK Logo">
                         </a>
                         <p>Laboratorio de análisis clínicos y citológicos de confianza. Brindamos resultados precisos y oportunos para el cuidado de tu salud.</p>
                         <div class="social-icons">
