@@ -17,7 +17,7 @@
     <header>
         <div class="container">
             <a href="index.php?page=home" class="logo">
-                <img src="assets/img/logo labtek-fotor-bg.png" alt="LABTEK Logo">
+                <img src="assets/img/labtek-logo-of.jpeg" alt="LABTEK Logo">
             </a>
             <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
                 <i class="fas fa-bars"></i>
