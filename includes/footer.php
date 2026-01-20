@@ -38,7 +38,7 @@
                         <ul class="footer-contact">
                             <li>
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>Av. Principal #123, Ciudad</span>
+                                <span>Av. Ballivian. Calacoto esq. Calle 14</span>
                             </li>
                             <li>
                                 <a href="https://wa.me/59178822909" target="_blank" style="color: inherit; text-decoration: none;">
