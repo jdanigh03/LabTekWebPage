@@ -45,7 +45,12 @@
 .footer-about .footer-logo img {
     height: 50px;
     width: auto;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); Removed */
+    /* filter: brightness(0) invert(1); Removed */
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    /* mix-blend-mode: multiply; Removed to show white bg */
     margin-bottom: 20px;
 }
 

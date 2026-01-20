@@ -41,7 +41,7 @@ header .container {
 .logo img {
     height: 50px;
     width: auto;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); Removed to show original logo colors */
     transition: transform 0.3s ease;
 }
 
