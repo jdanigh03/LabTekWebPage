@@ -4,7 +4,7 @@ require_once 'config/config.php';
 
 // Simple Router
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-$allowed_pages = ['home', 'services', 'about', 'info', 'results'];
+$allowed_pages = ['home', 'services', 'about', 'info', 'results', 'contact'];
 
 if (!in_array($page, $allowed_pages)) {
     $page = 'home'; // Fallback to home
@@ -16,7 +16,8 @@ $page_titles = [
     'services' => 'Servicios',
     'about' => 'Sobre Nosotros',
     'info' => 'Información',
-    'results' => 'Consultar Resultados'
+    'results' => 'Consultar Resultados',
+    'contact' => 'Contacto'
 ];
 
 define('PAGE_TITLE', $page_titles[$page]);

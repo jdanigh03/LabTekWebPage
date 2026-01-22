@@ -41,9 +41,9 @@
                                 <span>Av. Ballivian. Calacoto esq. Calle 14</span>
                             </li>
                             <li>
-                                <a href="https://wa.me/59178822909" target="_blank" style="color: inherit; text-decoration: none;">
+                                <a href="https://wa.me/59169813222" target="_blank" style="color: inherit; text-decoration: none;">
                                     <i class="fab fa-whatsapp"></i>
-                                    <span>+591 78822909</span>
+                                    <span>+591 69813222</span>
                                 </a>
                             </li>
                             <li>
