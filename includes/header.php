@@ -27,10 +27,10 @@
                     <li><a href="index.php?page=home">Inicio</a></li>
                     <li><a href="index.php?page=services">Servicios</a></li>
                     <li><a href="index.php?page=about">Sobre Nosotros</a></li>
-                    <li><a href="#" class="contact-link">Contacto</a></li>
+                    <li><a href="index.php?page=contact" class="contact-link">Contacto</a></li>
                 </ul>
             </nav>
-            <a href="https://wa.me/59178822909" class="btn-whatsapp" target="_blank">
+            <a href="https://wa.me/59169813222" class="btn-whatsapp" target="_blank">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
         </div>

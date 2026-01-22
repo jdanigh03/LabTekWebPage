@@ -1,0 +1,220 @@
+/* assets/css/contact.css */
+
+/* Contact Hero */
+.contact-hero {
+    /* If the gradient was too light or failing, this dark blue ensures contrast on white/any bg */
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 80px 0 30px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    /* Text is white on dark gradient */
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 20px;
+}
+
+/* Fix for if the gradient isn't loading or user sees white background */
+.contact-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    /* Ensure high contrast if background appears white/grey to user */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-hero p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+/* Contact Section Layout */
+.contact-section {
+    padding-bottom: 60px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+@media (min-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1.5fr;
+        /* Info cards on left, map on right */
+        align-items: start;
+    }
+}
+
+/* Info Cards */
+.contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.info-card .icon-box {
+    width: 60px;
+    height: 60px;
+    background: var(--light-bg);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto 20px;
+}
+
+.info-card h3 {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.contact-link-item {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Hours List */
+.hours-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.hours-list li strong {
+    color: var(--secondary-color);
+}
+
+/* Map Section Wrapper Column */
+.map-wrapper-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.map-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.map-container-large {
+    line-height: 0;
+}
+
+.address-box {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.address-box i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+.address-box span {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .address-box {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        max-width: 100%;
+        margin-top: -10px;
+        border-radius: 0 0 20px 20px;
+        background: white;
+    }
+}
+
+/* Social Buttons Below Map */
+.social-links-below-map {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    /* Align left to match map flow, or center? Let's assume left/stretch */
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex: 1;
+    /* Stretch to fill space, or remove to keep compact */
+    justify-content: center;
+    max-width: 200px;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.social-btn.facebook {
+    background: #1877F2;
+}
+
+.social-btn.tiktok {
+    background: #000000;
+}
