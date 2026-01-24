@@ -7,30 +7,46 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 30px;
+    padding: 14px 32px;
     border-radius: var(--border-radius-pill);
     font-weight: 600;
     text-align: center;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 2px solid transparent;
-    /* Prepare for border changes */
     font-size: 1rem;
     gap: 10px;
-    /* Space between icon and text */
+    position: relative;
+    overflow: hidden;
 }
 
-/* Primary Button (Teal) */
+/* Efecto de brillo al hover */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Primary Button (Teal) - Con gradiente */
 .btn-primary {
-    background-color: var(--accent-teal);
+    background: linear-gradient(135deg, var(--accent-teal) 0%, #3bbcb1 100%);
     color: var(--text-light);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 6px 20px rgba(76, 209, 197, 0.35);
 }
 
 .btn-primary:hover {
-    background-color: #3bbcb1;
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, #3bbcb1 0%, var(--accent-teal) 100%);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(76, 209, 197, 0.5);
 }
 
 /* Outline Button (Transparent with White Border) */
@@ -38,26 +54,27 @@
     background-color: transparent;
     border-color: var(--text-light);
     color: var(--text-light);
+    backdrop-filter: blur(5px);
 }
 
 .btn-outline:hover {
     background-color: var(--text-light);
     color: var(--primary-blue);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-sm);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
 /* WhatsApp Button */
 .btn-whatsapp {
-    background-color: var(--accent-green);
+    background: linear-gradient(135deg, var(--accent-green) 0%, #1ebe57 100%);
     color: var(--text-light);
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
 }
 
 .btn-whatsapp:hover {
-    background-color: #1ebe57;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    background: linear-gradient(135deg, #1ebe57 0%, var(--accent-green) 100%);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
 }
 
 /* =========================
